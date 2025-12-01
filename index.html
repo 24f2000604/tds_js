@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q3 Earnings Report - Interactive Presentation</title>
+
+    <!-- Essential RevealJS CSS and Theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css"
+    />
+    <!-- Using a professional dark theme for financial data -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css"
+      id="theme"
+    />
+
+    <!-- Plugins CSS for syntax highlighting and math -->
+    <!-- We are using the Monokai theme for code highlighting -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css"
+    />
+
+    <!-- Custom CSS for branding/styling -->
+    <style>
+      /* Using a professional accent color */
+      .reveal .slides section h1 {
+        color: #f7b731; 
+      }
+      .reveal .slides section h2 {
+        color: #f7b731; 
+      }
+      .reveal .slides section .email-footer {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.7em;
+        color: #aaa;
+      }
+      /* Ensure code block font is clear */
+      .reveal pre code {
+        font-size: 0.8em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Slide 1: Title Slide with Email -->
+        <section>
+          <h1>Q3 Quarterly Earnings Report</h1>
+          <p>
+            **Analyzing Performance and Future Outlook**
+          </p>
+          <small>
+            Presented by: Technical Consultant | Q4 2025
+          </small>
+          <p class="email-footer">
+            Contact: <a href="mailto:24f2000604@ds.study.iitm.ac.in" aria-label="Email 24f2000604 at ds.study.iitm.ac.in">24f2000604@ds.study.iitm.ac.in</a>
+          </p>
+          <!-- Speaker Notes: Use 'S' key during presentation to view -->
+          <aside class="notes">
+            Welcome all stakeholders. Today, we'll review the key financial
+            highlights from Q3 and discuss our strategic positioning for the next
+            quarter. Focus on setting a professional and confident tone.
+          </aside>
+        </section>
+
+        <!-- Slide 2: Markdown Slide (Contains Fragments and a Table) -->
+        <section data-markdown>
+          <textarea data-template>
+            ## 📊 Q3 Financial Highlights
+
+            - **Revenue Growth:** Achieved 12% YOY growth, exceeding consensus. (Fragment: appears first)
+            - **Net Income:** Solid $55M, stable profit margins. (Fragment: appears second)
+            - **Key Challenge:** Rising operational costs, targeted for reduction next quarter. (Fragment: fades in)
+            - **Future Investment:** Strategic allocation to new FinTech platform. (Fragment: grows/pushes up)
+            
+            ---
+            
+            ## 📈 Segment Performance
+
+            | Segment | Q3 Revenue (M) | Q2 Revenue (M) | Change |
+            | :--- | :---: | :---: | :---: |
+            | Commercial Lending | $150 | $145 | +3.4% |
+            | Wealth Management | $85 | $80 | +6.25% |
+            | Digital Banking | $40 | $35 | +14.3% |
+            
+            *The Digital Banking sector shows the highest growth potential.*
+
+          </textarea>
+          <!-- Speaker Notes for the Markdown section -->
+          <aside class="notes">
+            Use the fragments to slowly introduce the key metrics. The table on the second
+            slide emphasizes the high growth rate in Digital Banking, which we will invest in further.
+          </aside>
+        </section>
+
+        <!-- Slide 3: Animated Elements (Fragments) -->
+        <section>
+          <h2>Strategic Roadmap: Next Steps</h2>
+          <p>We're focusing on three critical areas to drive Q4 success:</p>
+          <ul>
+            <li class="fragment fade-right">
+              **Optimization:** Streamlining operational workflows to reduce costs by 5%.
+            </li>
+            <li class="fragment fade-up">
+              **Innovation:** Launching the pilot program for our new AI-driven risk model.
+            </li>
+            <li class="fragment highlight-current-red">
+              **Expansion:** Entering the new APAC market via a strategic partnership.
+            </li>
+          </ul>
+          <!-- Speaker Notes -->
+          <aside class="notes">
+            Build the roadmap step-by-step using the animated fragments. Ensure stakeholders understand the importance of the APAC expansion and the new AI model.
+          </aside>
+        </section>
+
+        <!-- Slide 4: Code Samples with Syntax Highlighting -->
+        <section>
+          <h2>Risk Assessment Model Snippet (Python)</h2>
+          <p>
+            An excerpt from our Python script demonstrating the calculation of
+            Historic Value at Risk (VaR).
+          </p>
+          <pre>
+            <code class="python" data-line-numbers="2|4|6-7">
+import numpy as np
+import pandas as pd
+
+def calculate_var(returns, confidence_level=0.95):
+    """Calculates the Historic Value at Risk (VaR)"""
+    sorted_returns = np.sort(returns)
+    var_index = int(len(sorted_returns) * (1 - confidence_level))
+    return sorted_returns[var_index]
+            </code>
+          </pre>
+          <!-- Speaker Notes -->
+          <aside class="notes">
+            This slide showcases the rigor of our internal models. Line numbers highlight the core logic: loading data, defining the function, and calculating the percentile for VaR.
+          </aside>
+        </section>
+
+        <!-- Slide 5: Mathematical Equations (Financial Formula) -->
+        <section data-menu-title="CAPM Formula">
+          <h2>Capital Asset Pricing Model (CAPM)</h2>
+          <p>
+            We use the **CAPM** formula to estimate the expected return of an
+            asset, considering its systematic risk ($\beta$).
+          </p>
+          <p>
+            The required rate of return ($E(R_i)$) for an individual investment
+            is given by:
+          </p>
+          <!-- Display Math Equation using MathJax plugin -->
+          $$
+          E(R_i) = R_f + \beta_i \cdot (E(R_m) - R_f)
+          $$
+          <p style="font-size: 0.8em; margin-top: 30px;">
+            Where: $R_f$ is the risk-free rate, $\beta_i$ is the asset's beta,
+            and $E(R_m) - R_f$ is the market risk premium.
+          </p>
+          <!-- Speaker Notes -->
+          <aside class="notes">
+            This fundamental equation ensures our investments meet minimum return requirements based on the market risk they carry. This is how we justify capital allocation.
+          </aside>
+        </section>
+
+        <!-- Slide 6: Conclusion -->
+        <section>
+          <h2>Summary & Q&A</h2>
+          <ul>
+            <li>**Strong Q3:** Performance exceeded internal goals.</li>
+            <li>
+              **Focused Q4:** Execution of strategic roadmap is paramount.
+            </li>
+          </ul>
+          <h3 style="margin-top: 50px; color: #f7b731;">
+            **Thank you. Questions & Discussion**
+          </h3>
+          <p class="email-footer">
+            Contact: <a href="mailto:24f2000604@ds.study.iitm.ac.in" aria-label="Email 24f2000604 at ds.study.iitm.ac.in">24f2000604@ds.study.iitm.ac.in</a>
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <!-- Essential RevealJS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+
+    <!-- Plugins: MUST be loaded before initialization -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+    <!-- MathJax for rendering LaTeX equations -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+    <!-- Notes for speaker view -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+
+    <!-- Initialization -->
+    <script>
+      Reveal.initialize({
+        controls: true, 
+        progress: true, 
+        history: true,  
+        center: true,   
+        transition: "slide", 
+        width: 1280,    
+        height: 720,    
+
+        // Configuration for Markdown plugin
+        markdown: {
+          separator: '^\r?\n---\r?\n$',
+          separatorVertical: '^\r?\n--\r?\n$',
+        },
+
+        // FIX: Removing custom math configuration to prevent script conflict.
+        // The Math plugin will now use its safe default settings for loading MathJax 3.
+        
+        // List of enabled plugins
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealMath,
+          RevealNotes
+        ]
+      });
+    </script>
+  </body>
+</html>
