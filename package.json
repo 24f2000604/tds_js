@@ -1,12 +1,14 @@
 {
   "name": "marp-presentation",
   "version": "1.0.0",
-  "description": "Marp slides for Marp: Markdown Presentation Ecosystem",
+  "description": "Marp slides and Marimo notebook",
   "scripts": {
     "start": "marp --server slides.md",
     "build:html": "marp slides.md -o dist/slides.html",
     "build:pdf": "marp slides.md --pdf --allow-local-files -o dist/slides.pdf",
-    "build:pptx": "marp slides.md --pptx -o dist/slides.pptx"
+    "build:pptx": "marp slides.md --pptx -o dist/slides.pptx",
+    "marimo": "uvx marimo edit notebook.py",
+    "marimo:export": "uvx marimo export notebook.py -o dist/notebook.html"
   },
   "devDependencies": {
     "@marp-team/marp-cli": "latest"
