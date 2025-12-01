@@ -24,14 +24,14 @@
       href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css"
     />
 
-    <!-- Custom CSS for branding/styling -->
+    <!-- Custom CSS for branding/styling and fragment animations -->
     <style>
       /* Using a professional accent color */
       .reveal .slides section h1 {
-        color: #f7b731; 
+        color: #f7b731;
       }
       .reveal .slides section h2 {
-        color: #f7b731; 
+        color: #f7b731;
       }
       .reveal .slides section .email-footer {
         position: absolute;
@@ -45,27 +45,119 @@
       .reveal pre code {
         font-size: 0.8em;
       }
+
+      /* Fragment animation tweaks and custom effects */
+      /* A gentle grow-in for headings */
+      .fragment.grow-in {
+        opacity: 0;
+        transform: scale(0.92);
+      }
+      .fragment.grow-in.visible {
+        animation: growIn 420ms cubic-bezier(.2,.9,.3,1) both;
+      }
+      @keyframes growIn {
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      /* Subtle fade-up */
+      .fragment.fade-up {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      .fragment.fade-up.visible {
+        animation: fadeUp 380ms ease-out both;
+      }
+      @keyframes fadeUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Highlight in red for the most important item */
+      .fragment.highlight-current-red {
+        transition: color 250ms ease, transform 250ms ease;
+        color: #fff;
+      }
+      .fragment.highlight-current-red.visible {
+        color: #ff5252;
+        transform: scale(1.02);
+        text-shadow: 0 4px 18px rgba(255,82,82,0.08);
+      }
+
+      /* Slight fade-right used in few places */
+      .fragment.fade-right {
+        opacity: 0;
+        transform: translateX(-18px);
+      }
+      .fragment.fade-right.visible {
+        animation: fadeRight 360ms ease-out both;
+      }
+      @keyframes fadeRight {
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      /* Table row reveal style */
+      table.fragment-rows tr.fragment {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      table.fragment-rows tr.fragment.visible {
+        animation: rowIn 360ms ease-out both;
+      }
+      @keyframes rowIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Emphasize the core stats on title slide */
+      .big-stats {
+        font-size: 1.15em;
+        color: #fff;
+        opacity: 0.95;
+      }
+
+      /* Ensure fragments inside markdown respect spacing */
+      .reveal section[data-markdown] .slides > section .fragment {
+        display: inline-block;
+      }
     </style>
   </head>
 
   <body>
     <div class="reveal">
       <div class="slides">
-        <!-- Slide 1: Title Slide with Email -->
+        <!-- Slide 1: Title Slide with Email (animated with fragments) -->
         <section>
-          <h1>Q3 Quarterly Earnings Report</h1>
-          <p>
-            **Analyzing Performance and Future Outlook**
+          <h1 class="fragment grow-in" data-fragment-index="1">Q3 Quarterly Earnings Report</h1>
+          <p class="fragment fade-up" data-fragment-index="2">
+            <strong>Analyzing Performance and Future Outlook</strong>
           </p>
-          <small>
+          <small class="fragment fade-right" data-fragment-index="3">
             Presented by: Technical Consultant | Q4 2025
           </small>
-          <p class="email-footer">
-            Contact: <a href="mailto:24f2000604@ds.study.iitm.ac.in" aria-label="Email 24f2000604 at ds.study.iitm.ac.in">24f2000604@ds.study.iitm.ac.in</a>
-            EMAILL: 24f2000604@ds.study.iitm.ac.in
+
+          <p class="big-stats fragment fade-up" data-fragment-index="4" style="margin-top: 16px;">
+            Solid results, accelerating digital adoption
           </p>
-          <p class="email">24f2000604@ds.study.iitm.ac.in</p>
-          <a href="24f2000604@ds.study.iitm.ac.in">24f2000604@ds.study.iitm.ac.in</a>
+
+          <p class="email-footer fragment fade-up" data-fragment-index="5">
+            Contact: <a href="mailto:24f2000604@ds.study.iitm.ac.in" aria-label="Email 24f2000604 at ds.study.iitm.ac.in">24f2000604@ds.study.iitm.ac.in</a>
+          </p>
+
+          <!-- Keep a clean visible email for quick copy as a final fragment -->
+          <p class="email fragment fade-up" data-fragment-index="6" style="position: relative; margin-top: 8px;">
+            24f2000604@ds.study.iitm.ac.in
+          </p>
+
           <!-- Speaker Notes: Use 'S' key during presentation to view -->
           <aside class="notes">
             Welcome all stakeholders. Today, we'll review the key financial
@@ -79,23 +171,47 @@
           <textarea data-template>
             ## 📊 Q3 Financial Highlights
 
-            - **Revenue Growth:** Achieved 12% YOY growth, exceeding consensus. (Fragment: appears first)
-            - **Net Income:** Solid $55M, stable profit margins. (Fragment: appears second)
-            - **Key Challenge:** Rising operational costs, targeted for reduction next quarter. (Fragment: fades in)
-            - **Future Investment:** Strategic allocation to new FinTech platform. (Fragment: grows/pushes up)
+            - <span class="fragment fade-up" data-fragment-index="1">**Revenue Growth:** Achieved 12% YOY growth, exceeding consensus.</span>
+            - <span class="fragment fade-up" data-fragment-index="2">**Net Income:** Solid $55M, stable profit margins.</span>
+            - <span class="fragment fade-up" data-fragment-index="3">**Key Challenge:** Rising operational costs, targeted for reduction next quarter.</span>
+            - <span class="fragment fade-up" data-fragment-index="4">**Future Investment:** Strategic allocation to new FinTech platform.</span>
             
             ---
             
             ## 📈 Segment Performance
 
-            | Segment | Q3 Revenue (M) | Q2 Revenue (M) | Change |
-            | :--- | :---: | :---: | :---: |
-            | Commercial Lending | $150 | $145 | +3.4% |
-            | Wealth Management | $85 | $80 | +6.25% |
-            | Digital Banking | $40 | $35 | +14.3% |
-            
-            *The Digital Banking sector shows the highest growth potential.*
+            <table class="fragment-rows" style="width:100%; border-collapse:collapse; margin-top:10px;">
+              <thead>
+                <tr style="color:#f7b731;">
+                  <th style="text-align:left;">Segment</th>
+                  <th style="text-align:center;">Q3 Revenue (M)</th>
+                  <th style="text-align:center;">Q2 Revenue (M)</th>
+                  <th style="text-align:center;">Change</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="fragment" data-fragment-index="5">
+                  <td>Commercial Lending</td>
+                  <td style="text-align:center;">$150</td>
+                  <td style="text-align:center;">$145</td>
+                  <td style="text-align:center;">+3.4%</td>
+                </tr>
+                <tr class="fragment" data-fragment-index="6">
+                  <td>Wealth Management</td>
+                  <td style="text-align:center;">$85</td>
+                  <td style="text-align:center;">$80</td>
+                  <td style="text-align:center;">+6.25%</td>
+                </tr>
+                <tr class="fragment highlight-current-red" data-fragment-index="7">
+                  <td>Digital Banking</td>
+                  <td style="text-align:center;">$40</td>
+                  <td style="text-align:center;">$35</td>
+                  <td style="text-align:center;">+14.3%</td>
+                </tr>
+              </tbody>
+            </table>
 
+            *The Digital Banking sector shows the highest growth potential.*
           </textarea>
           <!-- Speaker Notes for the Markdown section -->
           <aside class="notes">
@@ -104,19 +220,19 @@
           </aside>
         </section>
 
-        <!-- Slide 3: Animated Elements (Fragments) -->
+        <!-- Slide 3: Animated Elements (Fragments, ordered) -->
         <section>
-          <h2>Strategic Roadmap: Next Steps</h2>
-          <p>We're focusing on three critical areas to drive Q4 success:</p>
+          <h2 class="fragment grow-in" data-fragment-index="1">Strategic Roadmap: Next Steps</h2>
+          <p class="fragment fade-up" data-fragment-index="2">We're focusing on three critical areas to drive Q4 success:</p>
           <ul>
-            <li class="fragment fade-right">
-              **Optimization:** Streamlining operational workflows to reduce costs by 5%.
+            <li class="fragment fade-right" data-fragment-index="3">
+              <strong>Optimization:</strong> Streamlining operational workflows to reduce costs by 5%.
             </li>
-            <li class="fragment fade-up">
-              **Innovation:** Launching the pilot program for our new AI-driven risk model.
+            <li class="fragment fade-up" data-fragment-index="4">
+              <strong>Innovation:</strong> Launching the pilot program for our new AI-driven risk model.
             </li>
-            <li class="fragment highlight-current-red">
-              **Expansion:** Entering the new APAC market via a strategic partnership.
+            <li class="fragment highlight-current-red" data-fragment-index="5">
+              <strong>Expansion:</strong> Entering the new APAC market via a strategic partnership.
             </li>
           </ul>
           <!-- Speaker Notes -->
@@ -125,14 +241,14 @@
           </aside>
         </section>
 
-        <!-- Slide 4: Code Samples with Syntax Highlighting -->
+        <!-- Slide 4: Code Samples with Syntax Highlighting and fragment reveals -->
         <section>
-          <h2>Risk Assessment Model Snippet (Python)</h2>
-          <p>
+          <h2 class="fragment grow-in" data-fragment-index="1">Risk Assessment Model Snippet (Python)</h2>
+          <p class="fragment fade-up" data-fragment-index="2">
             An excerpt from our Python script demonstrating the calculation of
             Historic Value at Risk (VaR).
           </p>
-          <pre>
+          <pre class="fragment" data-fragment-index="3">
             <code class="python" data-line-numbers="2|4|6-7">
 import numpy as np
 import pandas as pd
@@ -150,22 +266,21 @@ def calculate_var(returns, confidence_level=0.95):
           </aside>
         </section>
 
-        <!-- Slide 5: Mathematical Equations (Financial Formula) -->
+        <!-- Slide 5: Mathematical Equations (Financial Formula) with fragment -->
         <section data-menu-title="CAPM Formula">
-          <h2>Capital Asset Pricing Model (CAPM)</h2>
-          <p>
-            We use the **CAPM** formula to estimate the expected return of an
-            asset, considering its systematic risk ($\beta$).
+          <h2 class="fragment grow-in" data-fragment-index="1">Capital Asset Pricing Model (CAPM)</h2>
+          <p class="fragment fade-up" data-fragment-index="2">
+            We use the <strong>CAPM</strong> formula to estimate the expected return of an
+            asset, considering its systematic risk (<em>&beta;</em>).
           </p>
-          <p>
-            The required rate of return ($E(R_i)$) for an individual investment
-            is given by:
-          </p>
-          <!-- Display Math Equation using MathJax plugin -->
-          $$
-          E(R_i) = R_f + \beta_i \cdot (E(R_m) - R_f)
-          $$
-          <p style="font-size: 0.8em; margin-top: 30px;">
+
+          <div class="fragment fade-up" data-fragment-index="3">
+            $$
+            E(R_i) = R_f + \beta_i \cdot (E(R_m) - R_f)
+            $$
+          </div>
+
+          <p class="fragment fade-up" data-fragment-index="4" style="font-size: 0.8em; margin-top: 30px;">
             Where: $R_f$ is the risk-free rate, $\beta_i$ is the asset's beta,
             and $E(R_m) - R_f$ is the market risk premium.
           </p>
@@ -175,19 +290,17 @@ def calculate_var(returns, confidence_level=0.95):
           </aside>
         </section>
 
-        <!-- Slide 6: Conclusion -->
+        <!-- Slide 6: Conclusion with fragmented bullet reveal -->
         <section>
-          <h2>Summary & Q&A</h2>
+          <h2 class="fragment grow-in" data-fragment-index="1">Summary & Q&A</h2>
           <ul>
-            <li>**Strong Q3:** Performance exceeded internal goals.</li>
-            <li>
-              **Focused Q4:** Execution of strategic roadmap is paramount.
-            </li>
+            <li class="fragment fade-up" data-fragment-index="2">**Strong Q3:** Performance exceeded internal goals.</li>
+            <li class="fragment fade-up" data-fragment-index="3">**Focused Q4:** Execution of strategic roadmap is paramount.</li>
           </ul>
-          <h3 style="margin-top: 50px; color: #f7b731;">
-            **Thank you. Questions & Discussion**
+          <h3 class="fragment highlight-current-red" data-fragment-index="4" style="margin-top: 50px; color: #f7b731;">
+            <strong>Thank you. Questions & Discussion</strong>
           </h3>
-          <p class="email-footer">
+          <p class="email-footer fragment fade-up" data-fragment-index="5">
             Contact: <a href="mailto:24f2000604@ds.study.iitm.ac.in" aria-label="Email 24f2000604 at ds.study.iitm.ac.in">24f2000604@ds.study.iitm.ac.in</a>
           </p>
         </section>
@@ -208,13 +321,13 @@ def calculate_var(returns, confidence_level=0.95):
     <!-- Initialization -->
     <script>
       Reveal.initialize({
-        controls: true, 
-        progress: true, 
-        history: true,  
-        center: true,   
-        transition: "slide", 
-        width: 1280,    
-        height: 720,    
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: "slide",
+        width: 1280,
+        height: 720,
 
         // Configuration for Markdown plugin
         markdown: {
@@ -222,9 +335,6 @@ def calculate_var(returns, confidence_level=0.95):
           separatorVertical: '^\r?\n--\r?\n$',
         },
 
-        // FIX: Removing custom math configuration to prevent script conflict.
-        // The Math plugin will now use its safe default settings for loading MathJax 3.
-        
         // List of enabled plugins
         plugins: [
           RevealMarkdown,
