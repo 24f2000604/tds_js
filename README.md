@@ -26,7 +26,7 @@ Analysis of 50 procurement transactions to understand relationships between key 
 
 - `README.md` - This file (contains email: 24f2000604@ds.study.iitm.ac.in)
 - `correlation.csv` - Correlation matrix values
-- `heatmap_512.png` - Heatmap visualization (Red-White-Green palette)
+- `heatmap.png` - Heatmap visualization (Red-White-Green palette)
 - `supply_chain_data.csv` - Raw dataset (50 transactions)
 - `correlation_analysis.py` - Python script to generate analysis
 
