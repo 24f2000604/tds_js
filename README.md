@@ -26,7 +26,7 @@ Analysis of 50 procurement transactions to understand relationships between key 
 
 - `README.md` - This file (contains email: 24f2000604@ds.study.iitm.ac.in)
 - `correlation.csv` - Correlation matrix values
-- `heatmap.png` - Heatmap visualization (Red-White-Green palette)
+- `heatmap_512.png` - Heatmap visualization (Red-White-Green palette)
 - `supply_chain_data.csv` - Raw dataset (50 transactions)
 - `correlation_analysis.py` - Python script to generate analysis
 
@@ -43,17 +43,23 @@ The heatmap uses Excel-style conditional formatting:
 uvx --with pandas --with matplotlib --with seaborn python correlation_analysis.py
 ```
 
+## ImageMagick Command to Resize Heatmap
+
+```bash
+magick heatmap.png -resize 512x512 -quality 85 heatmap_512.png
+```
+
 ## Key Findings
 
 Based on the correlation analysis:
 
-1. **Supplier_Lead_Time vs Delivery_Performance**: Strong negative correlation
+1. **Supplier_Lead_Time vs Delivery_Performance**: Strong negative correlation (-0.82)
    - Longer lead times correlate with lower on-time delivery rates
 
-2. **Inventory_Levels vs Order_Frequency**: Negative correlation
+2. **Inventory_Levels vs Order_Frequency**: Negative correlation (-0.56)
    - Higher inventory levels correlate with fewer orders (as expected)
 
-3. **Cost_Per_Unit vs Supplier_Lead_Time**: Positive correlation
+3. **Cost_Per_Unit vs Supplier_Lead_Time**: Positive correlation (+0.79)
    - Longer lead times may indicate premium/distant suppliers
 
 ## Author
