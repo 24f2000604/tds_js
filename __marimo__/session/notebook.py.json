@@ -1,0 +1,112 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.18.1"
+  },
+  "cells": [
+    {
+      "id": "SFPL",
+      "code_hash": "ba56118fe83724162c072c9ff4143fa2",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><hr />\n<h2 id=\"notebook-information\">Notebook Information</h2>\n<ul>\n<li><strong>Author:</strong> <a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#50;&#52;&#102;&#50;&#48;&#48;&#48;&#54;&#48;&#52;&#64;&#100;&#115;&#46;&#115;&#116;&#117;&#100;&#121;&#46;&#105;&#105;&#116;&#109;&#46;&#97;&#99;&#46;&#105;&#110;\">&#50;&#52;&#102;&#50;&#48;&#48;&#48;&#54;&#48;&#52;&#64;&#100;&#115;&#46;&#115;&#116;&#117;&#100;&#121;&#46;&#105;&#105;&#116;&#109;&#46;&#97;&#99;&#46;&#105;&#110;</a></li>\n<li><strong>Email:</strong> <a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#50;&#52;&#102;&#50;&#48;&#48;&#48;&#54;&#48;&#52;&#64;&#100;&#115;&#46;&#115;&#116;&#117;&#100;&#121;&#46;&#105;&#105;&#116;&#109;&#46;&#97;&#99;&#46;&#105;&#110;\">&#50;&#52;&#102;&#50;&#48;&#48;&#48;&#54;&#48;&#52;&#64;&#100;&#115;&#46;&#115;&#116;&#117;&#100;&#121;&#46;&#105;&#105;&#116;&#109;&#46;&#97;&#99;&#46;&#105;&#110;</a></li>\n<li><strong>Framework:</strong> Marimo (Reactive Python Notebooks)</li>\n</ul>\n<h3 id=\"cell-dependencies-in-this-notebook\">Cell Dependencies in This Notebook:</h3>\n<div class=\"language-scdoc codehilite\"><pre><span></span><code>cell_introduction\n      \u2502\n      \u25bc\ncell_sliders \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n      \u2502                        \u2502\n      \u25bc                        \u25bc\ncell_generate_data      cell_visual_indicator\n      \u2502\n      \u25bc\ncell_dynamic_output\n      \u2502\n      \u25bc\ncell_data_table\n      \u2502\n      \u25bc\ncell_show_table\n      \u2502\n      \u25bc\ncell_footer\n</code></pre></div>\n<span class=\"paragraph\"><em>All cells with dependencies update reactively when upstream values change.</em></span>\n<hr />\n<span class=\"paragraph\"><strong>Contact:</strong> <a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#50;&#52;&#102;&#50;&#48;&#48;&#48;&#54;&#48;&#52;&#64;&#100;&#115;&#46;&#115;&#116;&#117;&#100;&#121;&#46;&#105;&#105;&#116;&#109;&#46;&#97;&#99;&#46;&#105;&#110;\">&#50;&#52;&#102;&#50;&#48;&#48;&#48;&#54;&#48;&#52;&#64;&#100;&#115;&#46;&#115;&#116;&#117;&#100;&#121;&#46;&#105;&#105;&#116;&#109;&#46;&#97;&#99;&#46;&#105;&#110;</a></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hbol",
+      "code_hash": "538b418786647c854c9211e7ba58e413",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"interactive-data-analysis-notebook\">Interactive Data Analysis Notebook</h1>\n<span class=\"paragraph\"><strong>Author:</strong> <a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#50;&#52;&#102;&#50;&#48;&#48;&#48;&#54;&#48;&#52;&#64;&#100;&#115;&#46;&#115;&#116;&#117;&#100;&#121;&#46;&#105;&#105;&#116;&#109;&#46;&#97;&#99;&#46;&#105;&#110;\">&#50;&#52;&#102;&#50;&#48;&#48;&#48;&#54;&#48;&#52;&#64;&#100;&#115;&#46;&#115;&#116;&#117;&#100;&#121;&#46;&#105;&#105;&#116;&#109;&#46;&#97;&#99;&#46;&#105;&#110;</a></span>\n<span class=\"paragraph\">This notebook demonstrates the relationship between variables\nusing interactive widgets. Change the sliders below to see\nhow dependent cells update automatically.</span>\n<hr /></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "ab690371d07ca9fd09b69acd881e5994",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"interactive-controls\">Interactive Controls</h2>\n<span class=\"paragraph\">Adjust these parameters to explore the data:</span>\n<span class=\"paragraph\"><marimo-ui-element object-id='MJUe-0' random-id='37cf84d0-fb6c-a1b2-6b30-8c208e0483e7'><marimo-slider data-initial-value='100' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Sample Size (n)&lt;/span&gt;&lt;/span&gt;&quot;' data-start='10' data-stop='500' data-step='10' data-steps='[]' data-debounce='false' data-disabled='false' data-orientation='&quot;horizontal&quot;' data-show-value='false' data-include-input='false' data-full-width='false'></marimo-slider></marimo-ui-element></span>\n<span class=\"paragraph\"><marimo-ui-element object-id='MJUe-1' random-id='f9116093-3274-db79-748c-d5db2d5e0581'><marimo-slider data-initial-value='0.5' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Noise Level (\u03c3)&lt;/span&gt;&lt;/span&gt;&quot;' data-start='0.0' data-stop='2.0' data-step='0.1' data-steps='[]' data-debounce='false' data-disabled='false' data-orientation='&quot;horizontal&quot;' data-show-value='false' data-include-input='false' data-full-width='false'></marimo-slider></marimo-ui-element></span>\n<span class=\"paragraph\"><marimo-ui-element object-id='MJUe-2' random-id='65e92993-faca-5642-93eb-61204e218e35'><marimo-slider data-initial-value='0.7' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Correlation (r)&lt;/span&gt;&lt;/span&gt;&quot;' data-start='-1.0' data-stop='1.0' data-step='0.1' data-steps='[]' data-debounce='false' data-disabled='false' data-orientation='&quot;horizontal&quot;' data-show-value='false' data-include-input='false' data-full-width='false'></marimo-slider></marimo-ui-element></span>\n<hr /></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "dbf6b9f8b5391e84c0661dbc9efb7308",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "94d629ae7e3075e2dff511d61b9ee157",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"data-summary\">Data Summary</h2>\n<table>\n<thead>\n<tr>\n<th>Parameter</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Sample Size</td>\n<td><strong>100</strong></td>\n</tr>\n<tr>\n<td>Target Correlation</td>\n<td><strong>0.70</strong></td>\n</tr>\n<tr>\n<td>Actual Correlation</td>\n<td><strong>0.9769</strong></td>\n</tr>\n<tr>\n<td>Noise Level</td>\n<td><strong>0.50</strong></td>\n</tr>\n<tr>\n<td>Mean(X)</td>\n<td>5.00</td>\n</tr>\n<tr>\n<td>Mean(Y)</td>\n<td>3.45</td>\n</tr>\n<tr>\n<td>Std(X)</td>\n<td>2.92</td>\n</tr>\n<tr>\n<td>Std(Y)</td>\n<td>2.11</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"correlation-strength-strong\">Correlation Strength: Strong</h3>\n<span class=\"paragraph\">\ud83d\udfe2\ud83d\udfe2\ud83d\udfe2\ud83d\udfe2\ud83d\udfe2</span>\n<hr />\n<span class=\"paragraph\"><em>This output updates reactively when you move the sliders above.</em></span>\n<span class=\"paragraph\">Contact: <a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#50;&#52;&#102;&#50;&#48;&#48;&#48;&#54;&#48;&#52;&#64;&#100;&#115;&#46;&#115;&#116;&#117;&#100;&#121;&#46;&#105;&#105;&#116;&#109;&#46;&#97;&#99;&#46;&#105;&#110;\">&#50;&#52;&#102;&#50;&#48;&#48;&#48;&#54;&#48;&#52;&#64;&#100;&#115;&#46;&#115;&#116;&#117;&#100;&#121;&#46;&#105;&#105;&#116;&#109;&#46;&#97;&#99;&#46;&#105;&#110;</a></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "719cd2a25eee380acaee18b4ecdef905",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"visual-indicators\">Visual Indicators</h2>\n<span class=\"paragraph\"><strong>Sample Size:</strong> \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 (100)</span>\n<span class=\"paragraph\"><strong>Noise Level:</strong> \u2591\u2591 (0.5)</span>\n<hr /></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "971d6d660dfc04667ed0ff0baa19cffd",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"generated-data-preview\">Generated Data Preview</h2>\n<span class=\"paragraph\">Showing first 10 rows of 100 total samples:</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "0927938a9eab51d02f10bb6363640233",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='Xref-0' random-id='65d885fa-749a-6648-47d7-5d106b350060'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;X&#92;&quot;:0.0,&#92;&quot;Y&#92;&quot;:0.24835707650561634},{&#92;&quot;X&#92;&quot;:0.10101010101010101,&#92;&quot;Y&#92;&quot;:0.0015749201214783765},{&#92;&quot;X&#92;&quot;:0.20202020202020202,&#92;&quot;Y&#92;&quot;:0.4652584104644877},{&#92;&quot;X&#92;&quot;:0.30303030303030304,&#92;&quot;Y&#92;&quot;:0.9736361403252248},{&#92;&quot;X&#92;&quot;:0.40404040404040403,&#92;&quot;Y&#92;&quot;:0.16575159546661483},{&#92;&quot;X&#92;&quot;:0.5050505050505051,&#92;&quot;Y&#92;&quot;:0.23646687506076325},{&#92;&quot;X&#92;&quot;:0.6060606060606061,&#92;&quot;Y&#92;&quot;:1.21384883199612},{&#92;&quot;X&#92;&quot;:0.7070707070707071,&#92;&quot;Y&#92;&quot;:0.8786668595259493},{&#92;&quot;X&#92;&quot;:0.8080808080808081,&#92;&quot;Y&#92;&quot;:0.33091937268908955},{&#92;&quot;X&#92;&quot;:0.9090909090909091,&#92;&quot;Y&#92;&quot;:0.9076436581566187}]&quot;' data-total-rows='10' data-total-columns='2' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;X&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Y&quot;,[&quot;number&quot;,&quot;float64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}
