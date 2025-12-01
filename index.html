@@ -10,7 +10,10 @@
     <!-- Essential RevealJS CSS and Theme -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css" id="theme" />
+    
+    <!-- Syntax Highlighting CSS - Multiple sources for redundancy -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css" />
 
     <!-- Custom CSS -->
     <style>
@@ -400,6 +403,13 @@ Note: Final Markdown summary with math. Contact: 24f2000604@ds.study.iitm.ac.in
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+    
+    <!-- Fallback highlight.js from CDN for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/sql.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/r.min.js"></script>
 
     <!-- Initialization -->
     <script>
@@ -414,12 +424,18 @@ Note: Final Markdown summary with math. Contact: 24f2000604@ds.study.iitm.ac.in
         markdown: { separator: '^\r?\n---\r?\n$', separatorVertical: '^\r?\n--\r?\n$', notesSeparator: '^Note:' },
         math: { mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js', config: 'TeX-AMS_HTML-full' },
         highlight: {
-          highlightOnLoad: true,
-          beforeHighlight: hljs => hljs.configure({ languages: ['python', 'javascript', 'sql', 'r', 'json', 'bash'] })
+          highlightOnLoad: true
         },
         plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ]
+      }).then(() => {
+        // Apply syntax highlighting after Reveal is ready
+        document.querySelectorAll('pre code').forEach((block) => {
+          if (window.hljs) {
+            hljs.highlightElement(block);
+          }
+        });
       });
-      console.log('RevealJS Initialized | Author: 24f2000604@ds.study.iitm.ac.in');
+      console.log('RevealJS Initialized with Syntax Highlighting | Author: 24f2000604@ds.study.iitm.ac.in');
     </script>
     <!-- Summary: Email 7+ times, Markdown 5 slides, Fragments 50+, Code 4 (Python/JS/SQL/R), Math 10+, Notes 14 -->
   </body>
