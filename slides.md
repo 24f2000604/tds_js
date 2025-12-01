@@ -127,13 +127,11 @@ Also show Big-O examples inline: $O(n)$, $O(n\log n)$, $O(n^2)$.
 
 ---
 
+<!-- _class: lead -->
+
+![bg cover](images/bg-slide.svg)
+
 ## Slide with Background Image
-
-<!-- _backgroundImage: 'images/bg-slide.svg' -->
-<!-- _backgroundSize: cover -->
-<!-- _backgroundPosition: center -->
-
-# Visual: Background Slide
 
 This slide uses an embedded SVG background stored in `images/bg-slide.svg`.
 
