@@ -1,0 +1,14 @@
+{
+  "name": "marp-presentation",
+  "version": "1.0.0",
+  "description": "Marp slides for Marp: Markdown Presentation Ecosystem",
+  "scripts": {
+    "start": "marp --server slides.md",
+    "build:html": "marp slides.md -o dist/slides.html",
+    "build:pdf": "marp slides.md --pdf --allow-local-files -o dist/slides.pdf",
+    "build:pptx": "marp slides.md --pptx -o dist/slides.pptx"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "latest"
+  }
+}
