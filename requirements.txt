@@ -1,0 +1,5 @@
+# Requirements for E-Commerce Customer Retention Analysis
+# Install with: pip install -r requirements.txt
+
+pandas>=1.5.0
+matplotlib>=3.6.0
